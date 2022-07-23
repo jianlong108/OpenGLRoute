@@ -16,6 +16,9 @@
 		680B2FA2288BBBE700AD79C3 /* OpenGLOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FA1288BBBE700AD79C3 /* OpenGLOneViewController.m */; };
 		680B2FA5288BBEF700AD79C3 /* OpenGLTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FA4288BBEF700AD79C3 /* OpenGLTwoViewController.m */; };
 		680B2FA8288BD45C00AD79C3 /* JLGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FA7288BD45C00AD79C3 /* JLGLKView.m */; };
+		680B2FAB288C008F00AD79C3 /* OpenGLMultitextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FAA288C008F00AD79C3 /* OpenGLMultitextureViewController.m */; };
+		680B2FAD288C010500AD79C3 /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = 680B2FAC288C010500AD79C3 /* leaves.gif */; };
+		680B2FB0288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FAF288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,11 @@
 		680B2FA4288BBEF700AD79C3 /* OpenGLTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTwoViewController.m; sourceTree = "<group>"; };
 		680B2FA6288BD45C00AD79C3 /* JLGLKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLGLKView.h; sourceTree = "<group>"; };
 		680B2FA7288BD45C00AD79C3 /* JLGLKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLGLKView.m; sourceTree = "<group>"; };
+		680B2FA9288C008F00AD79C3 /* OpenGLMultitextureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLMultitextureViewController.h; sourceTree = "<group>"; };
+		680B2FAA288C008F00AD79C3 /* OpenGLMultitextureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLMultitextureViewController.m; sourceTree = "<group>"; };
+		680B2FAC288C010500AD79C3 /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
+		680B2FAE288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLTextureDynamicViewController.h; sourceTree = "<group>"; };
+		680B2FAF288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTextureDynamicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,13 @@
 				680B2FA1288BBBE700AD79C3 /* OpenGLOneViewController.m */,
 				680B2FA3288BBEF700AD79C3 /* OpenGLTwoViewController.h */,
 				680B2FA4288BBEF700AD79C3 /* OpenGLTwoViewController.m */,
+				680B2FA9288C008F00AD79C3 /* OpenGLMultitextureViewController.h */,
+				680B2FAA288C008F00AD79C3 /* OpenGLMultitextureViewController.m */,
+				680B2FAE288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.h */,
+				680B2FAF288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m */,
 				680B2F90288BB5B300AD79C3 /* Main.storyboard */,
 				680B2F93288BB5B500AD79C3 /* Assets.xcassets */,
+				680B2FAC288C010500AD79C3 /* leaves.gif */,
 				680B2F95288BB5B500AD79C3 /* LaunchScreen.storyboard */,
 				680B2F98288BB5B500AD79C3 /* Info.plist */,
 				680B2F99288BB5B500AD79C3 /* main.m */,
@@ -145,6 +158,7 @@
 			files = (
 				680B2F97288BB5B500AD79C3 /* LaunchScreen.storyboard in Resources */,
 				680B2F94288BB5B500AD79C3 /* Assets.xcassets in Resources */,
+				680B2FAD288C010500AD79C3 /* leaves.gif in Resources */,
 				680B2F92288BB5B300AD79C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				680B2FA5288BBEF700AD79C3 /* OpenGLTwoViewController.m in Sources */,
+				680B2FB0288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m in Sources */,
 				680B2FA8288BD45C00AD79C3 /* JLGLKView.m in Sources */,
 				680B2F8F288BB5B300AD79C3 /* ViewController.m in Sources */,
+				680B2FAB288C008F00AD79C3 /* OpenGLMultitextureViewController.m in Sources */,
 				680B2F89288BB5B300AD79C3 /* AppDelegate.m in Sources */,
 				680B2FA2288BBBE700AD79C3 /* OpenGLOneViewController.m in Sources */,
 				680B2F9A288BB5B500AD79C3 /* main.m in Sources */,

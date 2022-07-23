@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import "OpenGLOneViewController.h"
 #import "OpenGLTwoViewController.h"
+#import "OpenGLMultitextureViewController.h"
+#import "OpenGLTextureDynamicViewController.h"
 
 #define cellid @"OPENGL--tableView"
 
@@ -81,8 +83,19 @@
             OpenGLTwoViewController *vc = [[OpenGLTwoViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         };
-        
-        _dataSource = @[one,two];
+        CellModel *three = [CellModel new];
+        three.name = @"3-多纹理绘图";
+        three.clickAction = ^{
+            OpenGLMultitextureViewController *vc = [[OpenGLMultitextureViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+        CellModel *four = [CellModel new];
+        four.name = @"4-多纹理动态绘图";
+        four.clickAction = ^{
+            OpenGLTextureDynamicViewController *vc = [[OpenGLTextureDynamicViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+        _dataSource = @[one,two,three,four];
     }
     return _dataSource;
 }
