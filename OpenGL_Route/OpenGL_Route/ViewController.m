@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "OpenGLOneViewController.h"
+#import "OpenGLTwoViewController.h"
 
 #define cellid @"OPENGL--tableView"
 
@@ -74,8 +75,14 @@
             OpenGLOneViewController *vc = [[OpenGLOneViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         };
+        CellModel *two = [CellModel new];
+        two.name = @"2-纹理绘图";
+        two.clickAction = ^{
+            OpenGLTwoViewController *vc = [[OpenGLTwoViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
         
-        _dataSource = @[one];
+        _dataSource = @[one,two];
     }
     return _dataSource;
 }

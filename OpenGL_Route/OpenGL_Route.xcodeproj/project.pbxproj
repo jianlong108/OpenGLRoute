@@ -14,6 +14,8 @@
 		680B2F97288BB5B500AD79C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B2F95288BB5B500AD79C3 /* LaunchScreen.storyboard */; };
 		680B2F9A288BB5B500AD79C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2F99288BB5B500AD79C3 /* main.m */; };
 		680B2FA2288BBBE700AD79C3 /* OpenGLOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FA1288BBBE700AD79C3 /* OpenGLOneViewController.m */; };
+		680B2FA5288BBEF700AD79C3 /* OpenGLTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FA4288BBEF700AD79C3 /* OpenGLTwoViewController.m */; };
+		680B2FA8288BD45C00AD79C3 /* JLGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FA7288BD45C00AD79C3 /* JLGLKView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		680B2F99288BB5B500AD79C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		680B2FA0288BBBE700AD79C3 /* OpenGLOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLOneViewController.h; sourceTree = "<group>"; };
 		680B2FA1288BBBE700AD79C3 /* OpenGLOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLOneViewController.m; sourceTree = "<group>"; };
+		680B2FA3288BBEF700AD79C3 /* OpenGLTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLTwoViewController.h; sourceTree = "<group>"; };
+		680B2FA4288BBEF700AD79C3 /* OpenGLTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTwoViewController.m; sourceTree = "<group>"; };
+		680B2FA6288BD45C00AD79C3 /* JLGLKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLGLKView.h; sourceTree = "<group>"; };
+		680B2FA7288BD45C00AD79C3 /* JLGLKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLGLKView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,12 @@
 				680B2F88288BB5B300AD79C3 /* AppDelegate.m */,
 				680B2F8D288BB5B300AD79C3 /* ViewController.h */,
 				680B2F8E288BB5B300AD79C3 /* ViewController.m */,
+				680B2FA6288BD45C00AD79C3 /* JLGLKView.h */,
+				680B2FA7288BD45C00AD79C3 /* JLGLKView.m */,
 				680B2FA0288BBBE700AD79C3 /* OpenGLOneViewController.h */,
 				680B2FA1288BBBE700AD79C3 /* OpenGLOneViewController.m */,
+				680B2FA3288BBEF700AD79C3 /* OpenGLTwoViewController.h */,
+				680B2FA4288BBEF700AD79C3 /* OpenGLTwoViewController.m */,
 				680B2F90288BB5B300AD79C3 /* Main.storyboard */,
 				680B2F93288BB5B500AD79C3 /* Assets.xcassets */,
 				680B2F95288BB5B500AD79C3 /* LaunchScreen.storyboard */,
@@ -146,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680B2FA5288BBEF700AD79C3 /* OpenGLTwoViewController.m in Sources */,
+				680B2FA8288BD45C00AD79C3 /* JLGLKView.m in Sources */,
 				680B2F8F288BB5B300AD79C3 /* ViewController.m in Sources */,
 				680B2F89288BB5B300AD79C3 /* AppDelegate.m in Sources */,
 				680B2FA2288BBBE700AD79C3 /* OpenGLOneViewController.m in Sources */,
