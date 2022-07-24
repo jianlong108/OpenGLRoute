@@ -54,7 +54,7 @@ static const sceneVertex vertices[] = {
     [super viewDidLoad];
     
     GLKView *view  = (GLKView *)self.view;
-    NSAssert([view isKindOfClass:[GLKView class]], @"ViewController's View is Not A GLKView");
+    NSAssert([view isKindOfClass:[JLGLKView class]], @"ViewController's View is Not A JLGLKView");
     //创建OpenGL ES2.0上下文
     view.context = [[EAGLContext alloc]initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
@@ -89,7 +89,9 @@ static const sceneVertex vertices[] = {
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 }
 
-- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
+- (void)glkView:(JLGLKView *)view drawInRect:(CGRect)rect
+//- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
+{
     [self.baseEffect prepareToDraw];
     
     //Clear Frame Buffer 设置当前绑定的 帧缓存 的像素颜色 渲染缓存 中的每一个像素的颜色为前面使用glclearColor()设置的值

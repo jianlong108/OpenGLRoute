@@ -6,10 +6,10 @@
 //
 
 #import <GLKit/GLKit.h>
-
+#import "JLGLKViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OpenGLOneViewController : GLKViewController
+@interface OpenGLOneViewController : JLGLKViewController
 
 @end
 

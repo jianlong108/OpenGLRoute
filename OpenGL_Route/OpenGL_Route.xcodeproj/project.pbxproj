@@ -19,6 +19,9 @@
 		680B2FAB288C008F00AD79C3 /* OpenGLMultitextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FAA288C008F00AD79C3 /* OpenGLMultitextureViewController.m */; };
 		680B2FAD288C010500AD79C3 /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = 680B2FAC288C010500AD79C3 /* leaves.gif */; };
 		680B2FB0288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FAF288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m */; };
+		680B2FB3288D3D3100AD79C3 /* JLGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FB2288D3D3100AD79C3 /* JLGLKViewController.m */; };
+		680B2FB6288D407900AD79C3 /* JLEAGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FB5288D407900AD79C3 /* JLEAGLContext.m */; };
+		680B2FB9288D421B00AD79C3 /* JLGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 680B2FB8288D421B00AD79C3 /* JLGLKVertexAttribArrayBuffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,12 @@
 		680B2FAC288C010500AD79C3 /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
 		680B2FAE288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLTextureDynamicViewController.h; sourceTree = "<group>"; };
 		680B2FAF288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTextureDynamicViewController.m; sourceTree = "<group>"; };
+		680B2FB1288D3D3100AD79C3 /* JLGLKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLGLKViewController.h; sourceTree = "<group>"; };
+		680B2FB2288D3D3100AD79C3 /* JLGLKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLGLKViewController.m; sourceTree = "<group>"; };
+		680B2FB4288D407900AD79C3 /* JLEAGLContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLEAGLContext.h; sourceTree = "<group>"; };
+		680B2FB5288D407900AD79C3 /* JLEAGLContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLEAGLContext.m; sourceTree = "<group>"; };
+		680B2FB7288D421B00AD79C3 /* JLGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
+		680B2FB8288D421B00AD79C3 /* JLGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,12 @@
 				680B2F8E288BB5B300AD79C3 /* ViewController.m */,
 				680B2FA6288BD45C00AD79C3 /* JLGLKView.h */,
 				680B2FA7288BD45C00AD79C3 /* JLGLKView.m */,
+				680B2FB1288D3D3100AD79C3 /* JLGLKViewController.h */,
+				680B2FB2288D3D3100AD79C3 /* JLGLKViewController.m */,
+				680B2FB4288D407900AD79C3 /* JLEAGLContext.h */,
+				680B2FB5288D407900AD79C3 /* JLEAGLContext.m */,
+				680B2FB7288D421B00AD79C3 /* JLGLKVertexAttribArrayBuffer.h */,
+				680B2FB8288D421B00AD79C3 /* JLGLKVertexAttribArrayBuffer.m */,
 				680B2FA0288BBBE700AD79C3 /* OpenGLOneViewController.h */,
 				680B2FA1288BBBE700AD79C3 /* OpenGLOneViewController.m */,
 				680B2FA3288BBEF700AD79C3 /* OpenGLTwoViewController.h */,
@@ -170,13 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680B2FB6288D407900AD79C3 /* JLEAGLContext.m in Sources */,
 				680B2FA5288BBEF700AD79C3 /* OpenGLTwoViewController.m in Sources */,
 				680B2FB0288C2E2400AD79C3 /* OpenGLTextureDynamicViewController.m in Sources */,
 				680B2FA8288BD45C00AD79C3 /* JLGLKView.m in Sources */,
 				680B2F8F288BB5B300AD79C3 /* ViewController.m in Sources */,
 				680B2FAB288C008F00AD79C3 /* OpenGLMultitextureViewController.m in Sources */,
 				680B2F89288BB5B300AD79C3 /* AppDelegate.m in Sources */,
+				680B2FB9288D421B00AD79C3 /* JLGLKVertexAttribArrayBuffer.m in Sources */,
 				680B2FA2288BBBE700AD79C3 /* OpenGLOneViewController.m in Sources */,
+				680B2FB3288D3D3100AD79C3 /* JLGLKViewController.m in Sources */,
 				680B2F9A288BB5B500AD79C3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
