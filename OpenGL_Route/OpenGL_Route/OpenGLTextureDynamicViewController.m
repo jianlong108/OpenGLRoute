@@ -71,12 +71,31 @@ static GLKVector3 movementVectors[3] = {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.preferredFramesPerSecond = 60;
     self.shouldAnimate = YES;
     self.shouldRepeatTexture = YES;
     self.shouldUseLineFilter = NO;
     
+    UISwitch *animation = [[UISwitch alloc] initWithFrame:CGRectMake(0, 70, 100, 100)];
+    animation.on = self.shouldAnimate;
+    [animation addTarget:self action:@selector(takeShouldAnimateFrom:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:animation];
+    
+    UISwitch *repeat = [[UISwitch alloc] initWithFrame:CGRectMake(0, 110, 100, 100)];
+    repeat.on = self.shouldRepeatTexture;
+    [repeat addTarget:self action:@selector(takeShouldRepeatTextureFrom:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:repeat];
+    
+    
+    UISwitch *useLinear = [[UISwitch alloc] initWithFrame:CGRectMake(0, 150, 100, 100)];
+    useLinear.on = self.shouldUseLineFilter;
+    [useLinear addTarget:self action:@selector(takeShouldUseLinearFilterFrom:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:useLinear];
+    
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 190, 300, 100)];
+    slider.value = 0.5;
+    [slider addTarget:self action:@selector(takeSCoordinateOffsetFrom:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:slider];
+    self.preferredFramesPerSecond = 60;
     
     GLKView *view = (GLKView *)self.view;
     NSAssert([view isKindOfClass:[GLKView class]], @"View controller's is not a GLKView");
@@ -98,6 +117,7 @@ static GLKVector3 movementVectors[3] = {
 - (void)loadVertexBuffer{
     glGenBuffers(1, &vertextBufferID);
     glBindBuffer(GL_ARRAY_BUFFER, vertextBufferID);
+    //GL_DYNAMIC_DRAW 动态渲染
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_DYNAMIC_DRAW);
 }
 
@@ -195,6 +215,7 @@ static GLKVector3 movementVectors[3] = {
 }
 
 
+/// 调用来自于 -[GLKViewController _updateAndDraw]
 - (void)update{
     
     //更新动画顶点位置
