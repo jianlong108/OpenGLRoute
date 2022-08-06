@@ -32,10 +32,8 @@
       _stride = aStride;
       _bufferSizeBytes = _stride * count;
       
-      glGenBuffers(1,                // STEP 1
-         &_name);
-      glBindBuffer(GL_ARRAY_BUFFER,  // STEP 2
-         self.name);
+      glGenBuffers(1, &_name); // STEP 1
+      glBindBuffer(GL_ARRAY_BUFFER, self.name); // STEP 2
       glBufferData(                  // STEP 3
          GL_ARRAY_BUFFER,  // Initialize buffer contents
          _bufferSizeBytes,  // Number of bytes to copy

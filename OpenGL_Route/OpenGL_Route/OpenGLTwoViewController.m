@@ -23,20 +23,21 @@ typedef struct {
 //    {{-1, 0.8, 0.0f},{0.0f,1.0f}}, //左上
 //    {{-1, -0.8, 0.0f},{0.0f,0.0f}}, //左下
 //};
-static const SceneVertex vertices[] = {
+static SceneVertex vertices[] = {
     {{1, -0.6, 0.0f,},{0.75f,0.25f}}, //右下
     {{1, 0.6,  0.0f},{0.75f,0.75f}}, //右上
     {{-1, 0.6, 0.0f},{0.25f,0.75f}}, //左上
     
     {{1, -0.6, 0.0f},{0.75f,0.25f}}, //右下
-    {{-1, 0.6, 0.0f},{0.25f,0.75f}}, //左上
     {{-1, -0.6, 0.0f},{0.25f,0.25f}}, //左下
+    {{-1, 0.6, 0.0f},{0.25f,0.75f}}, //左上
 };
 @interface OpenGLTwoViewController (){
     GLuint vertextBufferID;
 }
 
 @property (nonatomic,strong)GLKBaseEffect *baseEffect;
+@property (nonatomic, assign) CGFloat texValue;
 
 @end
 
@@ -59,9 +60,19 @@ static const SceneVertex vertices[] = {
     
     //填充纹理
     [self fillVertexArray];
-
+    _texValue = 0.75f;
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 40, 300, 100)];
+    slider.value = _texValue;
+    
+    [slider addTarget:self action:@selector(texValueChange:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:slider];
+    self.preferredFramesPerSecond = 60;
 }
 
+- (void)texValueChange:(UISlider *)sender
+{
+    _texValue = sender.value;
+}
 
 - (void)fillVertexArray{
     glGenBuffers(1, &vertextBufferID);
@@ -90,13 +101,58 @@ static const SceneVertex vertices[] = {
     self.baseEffect.texture2d0.target = textureInfo.target;
 }
 
+- (void)update
+{
+    for (int i = 0; i < sizeof(vertices)/sizeof(SceneVertex); i++) {
+        int index = i % 3;
+//        NSLog(@"%d %d %d", i,index,sizeof(vertices)/sizeof(SceneVertex));
+        if (index == 0) {
+            vertices[i].textureCoords.x = _texValue;
+            vertices[i].textureCoords.y = 1 - _texValue;
+        } else if (index == 2) {
+            vertices[i].textureCoords.x = 1 - _texValue;
+            vertices[i].textureCoords.y = _texValue;
+        } else { //index == 1
+            if (i == 1) {
+                vertices[i].textureCoords.x = _texValue;
+                vertices[i].textureCoords.y = _texValue;
+            } else {
+                vertices[i].textureCoords.x = 1 - _texValue;
+                vertices[i].textureCoords.y = 1 - _texValue;
+            }
+            
+        }
+    }
+    
+//    vertices[0].textureCoords.x = _texValue;
+//    vertices[0].textureCoords.y = 1 - _texValue;
+//
+//    vertices[1].textureCoords.x = _texValue;
+//    vertices[1].textureCoords.y = _texValue;
+//
+//    vertices[2].textureCoords.x = 1 - _texValue;
+//    vertices[2].textureCoords.y = _texValue;
+//
+//    vertices[3].textureCoords.x = _texValue;
+//    vertices[3].textureCoords.y = 1 - _texValue;
+//
+//    vertices[4].textureCoords.x = 1 - _texValue;
+//    vertices[4].textureCoords.y = 1 - _texValue;
+//
+//    vertices[5].textureCoords.x = 1 - _texValue;
+//    vertices[5].textureCoords.y = _texValue;
+    
+    //刷新vertexBuffer
+    glBindBuffer(GL_ARRAY_BUFFER, vertextBufferID);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_DYNAMIC_DRAW);
+}
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
     //清除背景色
     glClearColor(0.0f,0.0f,0.0f,1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     [self.baseEffect prepareToDraw];
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices)/sizeof(SceneVertex));
 }
 
 
