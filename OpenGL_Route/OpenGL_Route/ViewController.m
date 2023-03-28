@@ -10,6 +10,8 @@
 #import "OpenGLTwoViewController.h"
 #import "OpenGLMultitextureViewController.h"
 #import "OpenGLTextureDynamicViewController.h"
+#import "OpenGL1ViewController.h"
+#import "OpenGL2ViewController.h"
 
 #define cellid @"OPENGL--tableView"
 
@@ -71,10 +73,22 @@
 - (NSArray *)dataSource
 {
     if (!_dataSource) {
+        CellModel *one0 = [CellModel new];
+        one0.name = @"0-显示";
+        one0.clickAction = ^{
+            OpenGL1ViewController *vc = [[OpenGL1ViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
         CellModel *one = [CellModel new];
         one.name = @"1-基础绘制,三角形";
         one.clickAction = ^{
             OpenGLOneViewController *vc = [[OpenGLOneViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+        CellModel *one_1 = [CellModel new];
+        one_1.name = @"1-基础绘制,三角形_shader";
+        one_1.clickAction = ^{
+            OpenGL2ViewController *vc = [[OpenGL2ViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         };
         CellModel *two = [CellModel new];
@@ -95,7 +109,7 @@
             OpenGLTextureDynamicViewController *vc = [[OpenGLTextureDynamicViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         };
-        _dataSource = @[one,two,three,four];
+        _dataSource = @[one0,one,one_1,two,three,four];
     }
     return _dataSource;
 }
